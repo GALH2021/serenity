@@ -3,19 +3,18 @@
     justify-content: space-around;
     align-items: center;
     position: fixed;
-    /* background-color: black; */
     color: black;
     height: 80px;
     width: 100vw;
     bottom: 0;
     z-index: 100;
+    background-color: white;
 }
 
 .icon-circle {
     height: 40px;
     width: 40px;
     border-radius: 50px;
-    /* background-color: black; */
     display: flex;
     justify-content: center;
     align-items: center;
