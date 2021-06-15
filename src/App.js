@@ -26,7 +26,6 @@ function App() {
         </Container>
       </AuthProvider>
       <FilterForm />
-
       <Switch>
         <Route exact path="/">
           <Resources />
