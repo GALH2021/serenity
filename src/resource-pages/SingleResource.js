@@ -31,6 +31,7 @@ const SingleResources = (props) => {
         {data.audioUrl !== "" ? (
           <div>
             <iframe
+              title="podcast"
               width="50%"
               height="200"
               scrolling="no"
