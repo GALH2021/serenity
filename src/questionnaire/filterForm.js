@@ -54,9 +54,9 @@ class filterForm extends Component {
     render() {
         const { step } = this.state 
         
-        const { selfCare, loss, sharingGoodMemories, venting, advice, none1, nurseDoctor, familyCaregiver, professionalCaregiver, independentCaregiver, privateDutyCaregiver, informalCaregiver, volunteerCaregiver, none2 } = this.state
+        const { selfCare, loss, sharingGoodMemories, venting, advice, none1, nurseDoctor, familyCaregiver, professionalCaregiver, independentCaregiver, privateDutyCaregiver, informalCaregiver, volunteerCaregiver, none2, share, emoji, thought } = this.state
         
-        const topics = { selfCare, loss, sharingGoodMemories, venting, advice, none1, nurseDoctor, familyCaregiver, professionalCaregiver, independentCaregiver, privateDutyCaregiver, informalCaregiver, volunteerCaregiver, none2 }
+        const topics = { selfCare, loss, sharingGoodMemories, venting, advice, none1, nurseDoctor, familyCaregiver, professionalCaregiver, independentCaregiver, privateDutyCaregiver, informalCaregiver, volunteerCaregiver, none2, share, emoji, thought }
         switch(step) {
             case 1:
                 return (
@@ -77,7 +77,12 @@ class filterForm extends Component {
                 )
             case 3: 
                 return (
-                    <Status />
+                    <Status
+                        goToNext={this.goToNext}
+                        goBack={this.goBack}
+                        handleInputChange={this.handleInputChange}
+                        topics={topics}
+                     />
                 )
             case 4: 
                 return (
