@@ -1,11 +1,14 @@
 import React from 'react';
 import './App.css';
+
 import { Container } from 'react-bootstrap';
 import { AuthProvider } from './firebase-backend/context/AuthContext';
 
 
 import Signup from './firebase-backend/Signup';
 
+
+import FilterForm from './questionnaire/filterForm'
 
 function App() {
   return (
@@ -18,6 +21,7 @@ function App() {
           </div>
         </Container>
       </AuthProvider>
+      <FilterForm />
     </div>
   );
 }
