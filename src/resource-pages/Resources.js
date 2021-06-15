@@ -5,6 +5,7 @@ import "./resourceStyle.css";
 
 const Resources = () => {
   const listing = datafile.map((item, index) => {
+    console.log(item.title);
     return (
       <div key={index} className="resource-list">
         <img src={item.imgUrl} alt={item.title} />
