@@ -17,6 +17,8 @@ import './App.css';
 function App() {
   return (
     <div className="app">
+
+      {/* Bips Part */}
       <AuthProvider>
         <Container className="d-flex align-tiem-center justify-content-center">
           <div className="w-100" style={{ maxWidth: "500px" }}>
@@ -24,7 +26,17 @@ function App() {
           </div>
         </Container>
       </AuthProvider>
-      {/* <FilterForm /> */}
+      
+      
+      {/* 
+      // Shane James Part
+      <FilterForm /> 
+      */}
+
+
+      
+      {/* 
+      // Drew Wilson Part
       <Router>
         <nav>
           <div className="navbar-container">
@@ -43,6 +55,7 @@ function App() {
           </div>
         </nav>
         <main>
+          // Anny Ng Part 
           <Switch>
             <div>
               <Route exact path="/">
@@ -59,7 +72,8 @@ function App() {
             </div>
           </Switch>
         </main>
-      </Router>
+      </Router> 
+      */}
     </div>
   )
 }
