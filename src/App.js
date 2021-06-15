@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import FilterForm from './questionnaire/filterForm'
 
 function App() {
   return (
     <div className="App">
-      <h1>Serenity</h1>
+      <FilterForm />
     </div>
   );
 }
