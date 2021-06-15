@@ -11,7 +11,7 @@ const Resources = () => {
 
         <div>
           <h4>{item.desc}</h4>
-          <p className="overflow-ellipsis">{item.content}</p>
+          <p className="overflow-fade">{item.content}</p>
           <Link to={`/resource/${item.postId}`} key={index}>
             READ MORE
           </Link>
