@@ -9,7 +9,6 @@ class filterForm extends Component {
         super(props)
         this.state = {
             step: 1,
-            checked1: false,
             selfCare: false,
             loss: false, 
             sharingGoodMemories: false,
@@ -47,16 +46,17 @@ class filterForm extends Component {
     }
 
     // handle input changes
-    handleInputChange = event => value => {
-        console.log(event.target.value)
-        // this.setState({ ...this.state, [event.target.value]: !value })
+    handleInputChange = event => {
+        const isChecked = !this.state[event.target.name]
+        this.setState({ [event.target.name]: isChecked })
     }
 
     render() {
         const { step } = this.state 
-        const { selfCare, loss, sharingGoodMemories, venting, advice, none1 } = this.state
-        const { checked1 } = this.state
-        const topics = { selfCare, loss, sharingGoodMemories, venting, advice, none1 }
+        
+        const { selfCare, loss, sharingGoodMemories, venting, advice, none1, nurseDoctor, familyCaregiver, professionalCaregiver, independentCaregiver, privateDutyCaregiver, informalCaregiver, volunteerCaregiver, none2 } = this.state
+        
+        const topics = { selfCare, loss, sharingGoodMemories, venting, advice, none1, nurseDoctor, familyCaregiver, professionalCaregiver, independentCaregiver, privateDutyCaregiver, informalCaregiver, volunteerCaregiver, none2 }
         switch(step) {
             case 1:
                 return (
@@ -64,12 +64,16 @@ class filterForm extends Component {
                         goToNext={this.goToNext}
                         handleInputChange={this.handleInputChange}
                         topics={topics}
-                        checked1={checked1}
                      />
                 )
             case 2:
                 return (
-                    <PersonFilter />
+                    <PersonFilter
+                        goToNext={this.goToNext}
+                        goBack={this.goBack}
+                        handleInputChange={this.handleInputChange}
+                        topics={topics}
+                     />
                 )
             case 3: 
                 return (

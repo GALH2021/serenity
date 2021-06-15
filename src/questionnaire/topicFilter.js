@@ -1,28 +1,38 @@
 import React, { Component } from 'react';
 import AppBar from '@material-ui/core/AppBar';
-import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
+import Dialog from '@material-ui/core/Dialog';
 import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Button from '@material-ui/core/Button';
 
-class topicFilter extends Component {
+class TopicFilter extends Component {
+    nextScreen = event => {
+        event.preventDefault()
+        this.props.goToNext()
+    }
+
     render() {
-        const { topics, handleInputChange, checked1 } = this.props
+        const { topics, handleInputChange } = this.props
+        
         return (
-            <MuiThemeProvider>
-                <React.Fragment>
-                    <AppBar title='What topic is on your mind today?' />
+            <React.Fragment>
+                <Dialog
+                    open
+                    fullWidth
+                    maxWidth='sm'
+                >
+                    <AppBar position='static' title='What topic is on your mind today?'>
+                        <h1>What topic is on your mind?</h1>
+                    </AppBar>
                     <FormGroup>
                         <FormControlLabel
                             control={<Checkbox
-                                        checked={checked1}
-                                        onChange={() => {
-                                            handleInputChange(topics.selfCare)
-                                        }}
+                                        checked={topics.selfCare}
+                                        onChange={handleInputChange}
                                         name='selfCare'
                                         color='primary'
-                                        value='selfCare'
+                                        value={topics.selfCare}
                                     />
                             }
                             label='Selfcare'
@@ -33,6 +43,7 @@ class topicFilter extends Component {
                                 onChange={handleInputChange}
                                 name='loss'
                                 color='primary'
+                                value={topics.loss}
                             />
                             }
                             label='Loss'
@@ -43,6 +54,7 @@ class topicFilter extends Component {
                                 onChange={handleInputChange}
                                 name='sharingGoodMemories'
                                 color='primary'
+                                value={topics.sharingGoodMemories}
                             />
                             }
                             label='Sharing Good Memories'
@@ -53,6 +65,7 @@ class topicFilter extends Component {
                                 onChange={handleInputChange}
                                 name='venting'
                                 color='primary'
+                                value={topics.venting}
                             />
                             }
                             label='Venting'
@@ -63,6 +76,7 @@ class topicFilter extends Component {
                                 onChange={handleInputChange}
                                 name='advice'
                                 color='primary'
+                                value={topics.advice}
                             />
                             }
                             label='Advice'
@@ -71,17 +85,24 @@ class topicFilter extends Component {
                             control={<Checkbox
                                 checked={topics.none1}
                                 onChange={handleInputChange}
-                                name='none'
+                                name='none1'
                                 color='primary'
+                                value={topics.none1}
                             />
                             }
                             label='None of these'
                         />
+                        <br />
+                        <Button
+                            color="primary"
+                            variant="contained"
+                            onClick={this.nextScreen}
+                        >Continue</Button>
                     </FormGroup>
-                </React.Fragment>
-            </MuiThemeProvider>
+                </Dialog>
+            </React.Fragment>
         )
     }
 }
 
-export default topicFilter;
+export default TopicFilter;
