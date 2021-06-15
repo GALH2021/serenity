@@ -1,10 +1,10 @@
-import logo from './logo.svg';
+import Navbar from './home/Navbar';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>Serenity</h1>
+      <Navbar />
     </div>
   );
 }
