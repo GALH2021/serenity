@@ -1,12 +1,44 @@
-import Navbar from './home/Navbar';
+import React, { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
+import Home from './home/Home';
+// import './Navbar.css';
+import Chat from './chat/Chat';
+import { AiFillHome } from "react-icons/ai";
+import { BsFillChatDotsFill, BsFillPersonFill } from "react-icons/bs";
+import { RiBookletLine } from "react-icons/ri";
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
+    <div className="app">
+      <Router>
+        <nav>
+          <div className="navbar-container">
+            <Link to="/home" >
+              <div className="icon-circle"><AiFillHome className="navbar-icons" /></div>
+            </Link>
+            <Link to="/chat">
+              <div className="icon-circle"><BsFillChatDotsFill className="navbar-icons" /></div>
+            </Link>
+            <Link to="/questionnaire">
+              <div className="icon-circle"><RiBookletLine className="navbar-icons" /></div>
+            </Link>
+            <Link to="/settings">
+              <div className="icon-circle"><BsFillPersonFill className="navbar-icons" /></div>
+            </Link>
+          </div>
+          <main>
+            <Switch>
+              <div>
+                <Route path='/home' component={Home}></Route>
+                <Route path='/chat' component={Chat}></Route>
+                <Route path='/questionnaire'></Route>
+                <Route path='/settings'></Route>
+              </div>
+            </Switch>
+          </main>
+        </nav>
+      </Router>
     </div>
-  );
+  )
 }
-
 export default App;

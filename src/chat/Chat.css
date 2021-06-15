@@ -1,0 +1,35 @@
+.chatpage-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.chatpage-container > h2 {
+    width: 100%;
+    text-align: center;
+}
+
+.chatpage-container > p {
+    width: 100%;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.chat-form-container {
+    width: 310px;
+}
+
+.chat-message-area {
+    width: 300px;
+    height: 370px;
+    border: none;
+    border-top: 2px solid black ;
+}
+
+.chat-response {
+    width: 280px;
+    height: 30px;
+    padding: 0px 10px;
+    margin-top: 15px;
+    border-radius: 50px;
+    font-size: 16px;
+}
