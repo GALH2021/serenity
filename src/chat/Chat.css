@@ -57,5 +57,8 @@
 .chat-submit-button {
     margin: 5px 0px 0px 5px;
     width: 80px;
+    background-color: #122F68;
+    color: ghostwhite;
+    border-radius: 5px;
 
 }
