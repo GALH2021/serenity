@@ -17,6 +17,11 @@ class Status extends Component {
         this.props.goBack()
     }
 
+    exitToHome = event => {
+        event.preventDefault()
+        this.props.exitChat()
+    }
+
     render() {
         const { topics, handleInputChange } = this.props
 
@@ -67,8 +72,8 @@ class Status extends Component {
                     <Button
                         color="default"
                         variant="contained"
-                        onClick={this.prevScreen}
-                    >Back</Button>
+                        onClick={this.exitToHome}
+                    >Exit</Button>
 
                 </Dialog>
             </React.Fragment>

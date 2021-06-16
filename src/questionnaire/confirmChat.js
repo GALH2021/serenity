@@ -23,6 +23,11 @@ class ConfirmChat extends Component {
         this.props.submitChat()
     }
 
+    exitToHome = event => {
+        event.preventDefault()
+        this.props.exitChat()
+    }
+
     render() {
         const { openChats } = this.props
         return (
@@ -59,8 +64,8 @@ class ConfirmChat extends Component {
                     <Button
                         color="default"
                         variant="contained"
-                        onClick={this.prevScreen}
-                    >Back</Button>
+                        onClick={this.exitToHome}
+                    >Exit</Button>
 
                 </Dialog>
             </React.Fragment>

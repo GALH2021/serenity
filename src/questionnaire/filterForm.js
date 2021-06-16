@@ -97,6 +97,10 @@ class filterForm extends Component {
     this.props.history.push("/chat");
   };
 
+  exitChat = () => {
+    this.props.history.push('/')
+  }
+
   // handle input changes
   handleInputChange = (event) => {
     const isChecked = !this.state[event.target.name];
@@ -190,6 +194,7 @@ class filterForm extends Component {
             goToNext={this.goToNext}
             goBack={this.goBack}
             handleSumbit={this.handleSumbit()}
+            exitChat={this.exitChat}
             handleInputChange={this.handleInputChange}
             topics={topics}
           />
@@ -200,6 +205,7 @@ class filterForm extends Component {
             goBack={this.goBack}
             goToNext={this.goToNext}
             submitChat={this.submitChat}
+            exitChat={this.exitChat}
             handleSumbit={this.handleSumbit()}
             topics={topics}
             openChats={userChats}
@@ -211,6 +217,7 @@ class filterForm extends Component {
             goBack={this.goBack}
             goToNext={this.goToNext}
             submitChat={this.submitChat}
+            exitChat={this.exitChat}
             handleSumbit={this.handleSumbit()}
             topics={topics}
             openChats={userChats}
