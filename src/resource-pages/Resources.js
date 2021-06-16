@@ -4,34 +4,39 @@ import { Link } from "react-router-dom";
 import "./resourceStyle.css";
 
 const Resources = () => {
+  const apiURL = "https://serenity-api-ga.herokuapp.com/resources";
+
+  const [resources, setResources] = React.useState(null);
+
+  const getResources = async () => {
+    const response = await fetch(apiURL);
+    const data = await response.json();
+    console.log(data);
+    setResources(data);
+  };
+
+  React.useEffect(() => {
+    getResources();
+  }, []);
+
   const listing = datafile.map((item, index) => {
-    console.log(item.title);
     return (
-      <div key={index} className="resource-list">
-        <img src={item.imgUrl} alt={item.title} />
+      <Link to={`/resource/${item.postId}`} key={index}>
+        <div key={index} className="resource-list">
+          <img src={item.imgUrl} alt={item.desc} />
 
-        <div>
-          <h4>{item.desc}</h4>
-          <p className="overflow-fade">{item.content}</p>
-          <Link to={`/resource/${item.postId}`} key={index}>
-            READ MORE
-          </Link>
+          <div>
+            <h4>{item.desc}</h4>
+            <p className="overflow-fade">{item.content}</p>
+          </div>
         </div>
-
-        <div className="resource-tags">
-          <div id="resource-category">Category: {item.category}</div>
-          <div id="resource-type">Type: {item.type}</div>
-          <div id="resource-score">Post Score: {item.postScore}</div>
-        </div>
-
-        <hr />
-      </div>
+      </Link>
     );
   });
   return (
-    <div>
-      <h2>WELCOME</h2>
-      <hr />
+    <div className="resources">
+      <h2>Resources</h2>
+      <h3>Laila's Library</h3>
       {listing}
     </div>
   );
