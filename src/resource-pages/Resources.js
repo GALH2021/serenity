@@ -3,37 +3,32 @@ import datafile from "./datafile";
 import { Link } from "react-router-dom";
 import "./resourceStyle.css";
 
-const Resources = () => {
-  const listing = datafile.map((item, index) => {
-    console.log(item.title);
+const Resources = ({ resourceData }) => {
+  //console.log(resourceData);
+
+  const listing = resourceData.map((item, index) => {
     return (
-      <div key={index} className="resource-list">
-        <img src={item.imgUrl} alt={item.title} />
+      <Link to={`/resource/${item.id}`} key={index}>
+        <div key={index} className="resource-list">
+          <img src={item.imgUrl} alt={item.desc} />
 
-        <div>
-          <h4>{item.desc}</h4>
-          <p className="overflow-fade">{item.content}</p>
-          <Link to={`/resource/${item.postId}`} key={index}>
-            READ MORE
-          </Link>
+          <div>
+            <h4>{item.desc}</h4>
+            <p className="overflow-fade">{item.content}</p>
+          </div>
         </div>
-
-        <div className="resource-tags">
-          <div id="resource-category">Category: {item.category}</div>
-          <div id="resource-type">Type: {item.type}</div>
-          <div id="resource-score">Post Score: {item.postScore}</div>
-        </div>
-
-        <hr />
-      </div>
+      </Link>
     );
   });
-  return (
-    <div>
-      <h2>WELCOME</h2>
-      <hr />
+
+  return listing.length > 0 ? (
+    <div className="resources">
+      <h2>Resources</h2>
+      <h3>Laila's Library</h3>
       {listing}
     </div>
+  ) : (
+    <h2>Loading...</h2>
   );
 };
 

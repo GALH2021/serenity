@@ -20,6 +20,20 @@ import { RiBookletLine } from "react-icons/ri";
 import "./App.css";
 
 function App() {
+  const apiURL = "https://serenity-api-ga.herokuapp.com/resources";
+  const [resources, setResources] = React.useState([]);
+
+  const getResources = async () => {
+    const response = await fetch(apiURL);
+    const data = await response.json();
+    console.log("App.js api call: ", data);
+    setResources(data);
+  };
+
+  React.useEffect(() => {
+    getResources();
+  }, []);
+
   return (
     <div className="app">
       {/* Bips Part */}
@@ -49,6 +63,7 @@ function App() {
       {/*<FilterForm />*/}
 
       {/* Drew Wilson Part */}
+
       <Router>
         <nav>
           <div className="navbar-container">
@@ -78,8 +93,8 @@ function App() {
           {/* Anny Ng Part */}
           <Switch>
             <div>
-              <Route exact path="/">
-                <Resources />
+              <Route path="/resources">
+                <Resources resourceData={resources} />
               </Route>
               <Route path="/home" component={Home}></Route>
               <Route path="/chat" component={Chat}></Route>
@@ -87,9 +102,7 @@ function App() {
               <Route path="/settings"></Route>
               <Route
                 path="/resource/:id"
-                render={(routerProps) => (
-                  <SingleResource {...routerProps} resourceData={datafile} />
-                )}
+                render={(routerProps) => <SingleResource {...routerProps} />}
               />
             </div>
           </Switch>
