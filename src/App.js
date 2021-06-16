@@ -7,7 +7,9 @@ import Resources from "./resource-pages/Resources";
 import SingleResource from "./resource-pages/SingleResource";
 import { AuthProvider } from "./firebase-backend/context/AuthContext";
 import FilterForm from "./questionnaire/filterForm";
-import Signup from "./firebase-backend/Signup";
+import Signup from "./firebase-backend/components/Signup";
+import Login from "./firebase-backend/components/Login";
+import UserProfile from "./firebase-backend/components/UserProfile";
 import { Container } from "react-bootstrap";
 import { AiFillHome } from "react-icons/ai";
 import { BsFillChatDotsFill, BsFillPersonFill } from "react-icons/bs";
@@ -19,13 +21,22 @@ function App() {
     <div className="app">
 
       {/* Bips Part */}
-      <AuthProvider>
-        <Container className="d-flex align-tiem-center justify-content-center">
-          <div className="w-100" style={{ maxWidth: "500px" }}>
-            <Signup />
-          </div>
-        </Container>
-      </AuthProvider>
+      <Container 
+        className="d-flex align-tiem-center justify-content-center"
+        style={{ minHeight: "100vh" }}
+      >
+        <div className="w-100" style={{ maxWidth: "500px" }}>
+          <Router>
+            <AuthProvider>
+              <Switch>
+                <Route exact path="/userProfile" component={UserProfile}></Route>
+                <Route exact path="/signup" component={Signup}/>
+                <Route exact path="/login" component={Login}/>
+              </Switch>
+            </AuthProvider>
+          </Router>
+        </div>
+      </Container>
       
       
       {/* 
@@ -34,9 +45,7 @@ function App() {
       */}
 
 
-      
-      {/* 
-      // Drew Wilson Part
+      {/* Drew Wilson Part */}
       <Router>
         <nav>
           <div className="navbar-container">
@@ -55,7 +64,7 @@ function App() {
           </div>
         </nav>
         <main>
-          // Anny Ng Part 
+          {/* Anny Ng Part */}
           <Switch>
             <div>
               <Route exact path="/">
@@ -73,7 +82,7 @@ function App() {
           </Switch>
         </main>
       </Router> 
-      */}
+     
     </div>
   )
 }
