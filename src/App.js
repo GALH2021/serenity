@@ -25,7 +25,7 @@ function App() {
           </div>
         </Container>
       </AuthProvider>
-      {/* <FilterForm /> */}
+      <FilterForm />
       <Router>
         <nav>
           <div className="navbar-container">
