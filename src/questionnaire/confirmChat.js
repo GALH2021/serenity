@@ -24,7 +24,7 @@ class ConfirmChat extends Component {
     }
 
     render() {
-        const { openChats, handleSubmit, } = this.props
+        const { openChats } = this.props
         return (
             <React.Fragment>
                 <Dialog

@@ -1,7 +1,7 @@
 {
   "name": "serenity",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "@react-firebase/auth": "^0.2.10",
