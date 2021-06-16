@@ -13,7 +13,6 @@ import Login from "./firebase-backend/components/Login";
 import UserProfile from "./firebase-backend/components/UserProfile";
 import PrivateRoute from "./firebase-backend/components/PrivateRoute";
 import ForgotPassword from "./firebase-backend/components/ForgotPassword";
-import { currentUser } from "./firebase-backend/context/AuthContext";
 import { Container } from "react-bootstrap";
 import { AiFillHome } from "react-icons/ai";
 import { BsFillChatDotsFill, BsFillPersonFill } from "react-icons/bs";
