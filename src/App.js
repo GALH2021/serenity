@@ -23,7 +23,7 @@ function App() {
       {/* Bips Part */}
       <Container 
         className="d-flex align-tiem-center justify-content-center"
-        style={{ minHeight: "100vh" }}
+        //style={{ minHeight: "100vh" }}
       >
         <div className="w-100" style={{ maxWidth: "500px" }}>
           <Router>

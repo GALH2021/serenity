@@ -16,10 +16,6 @@ function Login() {
     async function handleSubmit(e) {
         e.preventDefault();
 
-        if(emailRef.current.value !== currentUser.email) {
-            return setError("The email is incorrect");
-        } 
-
         try {
             setError("");
             setLoading(true);
