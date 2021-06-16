@@ -19,6 +19,7 @@ import { BsFillChatDotsFill, BsFillPersonFill } from "react-icons/bs";
 import { RiBookletLine } from "react-icons/ri";
 import "./App.css";
 
+
 function App() {
   const apiURL = "https://serenity-api-ga.herokuapp.com/resources";
   const [resources, setResources] = React.useState([]);
@@ -36,7 +37,6 @@ function App() {
 
   return (
     <div className="app">
-      {/* Bips Part */}
       <Container className="d-flex align-tiem-center justify-content-center">
         <div className="w-100" style={{ maxWidth: "500px" }}>
           <Router>
