@@ -10,11 +10,15 @@ import FilterForm from "./questionnaire/filterForm";
 import Signup from "./firebase-backend/components/Signup";
 import Login from "./firebase-backend/components/Login";
 import UserProfile from "./firebase-backend/components/UserProfile";
+import PrivateRoute from "./firebase-backend/components/PrivateRoute";
+import ForgotPassword from "./firebase-backend/components/ForgotPassword";
 import { Container } from "react-bootstrap";
 import { AiFillHome } from "react-icons/ai";
 import { BsFillChatDotsFill, BsFillPersonFill } from "react-icons/bs";
 import { RiBookletLine } from "react-icons/ri";
 import './App.css';
+
+
 
 function App() {
   return (
@@ -23,15 +27,15 @@ function App() {
       {/* Bips Part */}
       <Container 
         className="d-flex align-tiem-center justify-content-center"
-        //style={{ minHeight: "100vh" }}
       >
         <div className="w-100" style={{ maxWidth: "500px" }}>
           <Router>
             <AuthProvider>
               <Switch>
-                <Route exact path="/userProfile" component={UserProfile}></Route>
+                <PrivateRoute exact path="/userProfile" component={UserProfile}/>
                 <Route exact path="/signup" component={Signup}/>
                 <Route exact path="/login" component={Login}/>
+                <Route exact path="/forgotPassword" component={ForgotPassword}/>
               </Switch>
             </AuthProvider>
           </Router>
