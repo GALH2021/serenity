@@ -24,6 +24,10 @@ function AuthProvider({ children }) {
         return firebaseAuth.signOut();
     }
 
+    function resetPassword(email) {
+        return firebaseAuth.sendPasswordResetEmail(email);
+    }
+
     useEffect(() => {
         const unsubscribe = firebaseAuth.onAuthStateChanged(user => {
             setCurrentUser(user);
@@ -38,6 +42,7 @@ function AuthProvider({ children }) {
         signup,
         login,
         logout,
+        resetPassword,
     }
 
     return (
