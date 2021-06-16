@@ -18,7 +18,7 @@ class Status extends Component {
     }
 
     render() {
-        const { topics, handleInputChange } = this.props
+        const { topics, handleInputChange, handleSubmit } = this.props
 
         return (
             <React.Fragment>
@@ -59,16 +59,17 @@ class Status extends Component {
                     />
                     <br />
                     <Button
-                        color="default"
-                        variant="contained"
-                        onClick={this.prevScreen}
-                    >Back</Button>
-                    <br />
-                    <Button
                         color="primary"
                         variant="contained"
                         onClick={this.nextScreen}
                     >Continue</Button>
+                    <br />
+                    <Button
+                        color="default"
+                        variant="contained"
+                        onClick={this.prevScreen}
+                    >Back</Button>
+
                 </Dialog>
             </React.Fragment>
         );
