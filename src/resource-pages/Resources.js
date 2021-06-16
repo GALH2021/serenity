@@ -3,21 +3,8 @@ import datafile from "./datafile";
 import { Link } from "react-router-dom";
 import "./resourceStyle.css";
 
-const Resources = () => {
-  const apiURL = "https://serenity-api-ga.herokuapp.com/resources";
-
-  const [resources, setResources] = React.useState(null);
-
-  const getResources = async () => {
-    const response = await fetch(apiURL);
-    const data = await response.json();
-    console.log(data);
-    setResources(data);
-  };
-
-  React.useEffect(() => {
-    getResources();
-  }, []);
+const Resources = ({ resourceData }) => {
+  //console.log(resourceData);
 
   const listing = datafile.map((item, index) => {
     return (
@@ -33,12 +20,15 @@ const Resources = () => {
       </Link>
     );
   });
-  return (
+
+  return listing.length > 0 ? (
     <div className="resources">
       <h2>Resources</h2>
       <h3>Laila's Library</h3>
       {listing}
     </div>
+  ) : (
+    <h2>Loading...</h2>
   );
 };
 

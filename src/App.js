@@ -15,6 +15,20 @@ import { RiBookletLine } from "react-icons/ri";
 import "./App.css";
 
 function App() {
+  const apiURL = "https://serenity-api-ga.herokuapp.com/resources";
+  const [resources, setResources] = React.useState([]);
+
+  const getResources = async () => {
+    const response = await fetch(apiURL);
+    const data = await response.json();
+    console.log("App.js api call: ", data);
+    setResources(data);
+  };
+
+  React.useEffect(() => {
+    getResources();
+  }, []);
+
   return (
     <div className="app">
       <AuthProvider>

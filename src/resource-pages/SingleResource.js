@@ -4,6 +4,8 @@ const SingleResources = (props) => {
   const idx = props.match.params.id - 1;
   const data = props.resourceData[idx];
 
+  console.log(data);
+
   const backToStock = () => {
     props.history.push("/resources");
   };
