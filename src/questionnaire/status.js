@@ -27,7 +27,7 @@ class Status extends Component {
                     fullWidth
                     maxWidth='sm'
                 >
-                    <AppBar position='static' title='What would you like to share with the community?'>
+                    <AppBar position='static' title='What would you like to share with the community?' style={{ backgroundColor: '#CDD8F4', color: 'black' }}>
                         <h1>What would you like to share with the community?</h1>
                     </AppBar>
                     <TextField
@@ -59,7 +59,7 @@ class Status extends Component {
                     />
                     <br />
                     <Button
-                        color="primary"
+                        style={{ backgroundColor: '#CDD8F4' }}
                         variant="contained"
                         onClick={this.nextScreen}
                     >Continue</Button>

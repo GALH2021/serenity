@@ -32,7 +32,7 @@ class ConfirmChat extends Component {
                     fullWidth
                     maxWidth='sm'
                 >
-                    <AppBar position='static' title='Pick your chat!'>
+                    <AppBar position='static' title='Pick your chat!' style={{ backgroundColor: '#CDD8F4', color: 'black' }}>
                         <h1>Pick your chat!</h1>
                     </AppBar>
                     <br />
@@ -51,7 +51,7 @@ class ConfirmChat extends Component {
                     </div>
                     <br />
                     <Button
-                        color="primary"
+                        style={{ backgroundColor: '#CDD8F4' }}
                         variant="contained"
                         onClick={this.goToChat}
                     >Chat</Button>

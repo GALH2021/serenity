@@ -26,7 +26,7 @@ class PersonFilter extends Component {
                     fullWidth
                     maxWidth='sm'
                 >
-                    <AppBar position='static' title='Who would you like to chat with?'>
+                    <AppBar position='static' title='Who would you like to chat with?' style={{ backgroundColor: '#CDD8F4', color: 'black' }}>
                         <h1>Who would you like to chat with?</h1>
                     </AppBar>
                     <FormGroup>
@@ -120,7 +120,7 @@ class PersonFilter extends Component {
                         />
                         <br />
                         <Button
-                            color="primary"
+                            style={{ backgroundColor: '#CDD8F4' }}
                             variant="contained"
                             onClick={this.nextScreen}
                         >Continue</Button>

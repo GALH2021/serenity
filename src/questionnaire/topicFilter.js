@@ -22,7 +22,7 @@ class TopicFilter extends Component {
                     fullWidth
                     maxWidth='sm'
                 >
-                    <AppBar position='static' title='What topic is on your mind today?'>
+                    <AppBar position='static' title='What topic is on your mind today?' style={{ backgroundColor: '#CDD8F4', color: 'black' }}>
                         <h1>What topic is on your mind?</h1>
                     </AppBar>
                     <FormGroup>
@@ -94,7 +94,7 @@ class TopicFilter extends Component {
                         />
                         <br />
                         <Button
-                            color="primary"
+                            style={{ backgroundColor: '#CDD8F4' }}
                             variant="contained"
                             onClick={this.nextScreen}
                         >Continue</Button>
