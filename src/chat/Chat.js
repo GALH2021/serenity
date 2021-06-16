@@ -27,7 +27,7 @@ export default function Chat() {
                 })}</div>
                 <form onSubmit={handleAddMessage}>
                     <input className="chat-response" type='text' placeholder="Type..." value={chatBoxData} onChange={(event) => setChatBoxData(event.target.value)} />
-                    <input className="chat-submit-button" type='submit' value="Send" />
+                    {/* <input className="chat-submit-button" type='submit' value="Send" /> */}
                 </form>
             </div>
         </div>
