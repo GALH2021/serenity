@@ -16,7 +16,7 @@ export default function Chat() {
     return (
         <div className="chatpage-container">
             <h2>Chat</h2>
-            <p>Taking care of someone can be tough, so chat with someone that understands what you're going through.</p>
+            <p>We knot that taking care of someone can be tough, so chat with someone that understands what you're going through.</p>
             <div className="chat-form-container">
                 <div className="chat-message-area">{messages.map((message) => {
                     return (
