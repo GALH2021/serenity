@@ -27,7 +27,7 @@ function Login() {
     }
 
     return (
-        <div className="Login" style="backgroundColor: #CDD8F4">
+        <div className="Login">
             <Card>
                 <Card.Body>
                     <h2 className="text-center mb-4">Log In</h2>
