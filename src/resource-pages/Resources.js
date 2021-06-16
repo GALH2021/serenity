@@ -6,9 +6,9 @@ import "./resourceStyle.css";
 const Resources = ({ resourceData }) => {
   //console.log(resourceData);
 
-  const listing = datafile.map((item, index) => {
+  const listing = resourceData.map((item, index) => {
     return (
-      <Link to={`/resource/${item.postId}`} key={index}>
+      <Link to={`/resource/${item.id}`} key={index}>
         <div key={index} className="resource-list">
           <img src={item.imgUrl} alt={item.desc} />
 

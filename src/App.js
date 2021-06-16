@@ -70,7 +70,7 @@ function App() {
           <Switch>
             <div>
               <Route path="/resources">
-                <Resources />
+                <Resources resourceData={resources} />
               </Route>
               <Route path="/home" component={Home}></Route>
               <Route path="/chat" component={Chat}></Route>
