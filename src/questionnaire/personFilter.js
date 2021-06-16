@@ -28,6 +28,7 @@ class PersonFilter extends Component {
                 >
                     <AppBar position='static' title='Who would you like to chat with?' style={{ backgroundColor: '#CDD8F4', color: 'black' }}>
                         <h1>Who would you like to chat with?</h1>
+                        <p>Please make one selection</p>
                     </AppBar>
                     <FormGroup>
                         <FormControlLabel

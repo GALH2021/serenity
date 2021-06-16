@@ -24,6 +24,7 @@ class TopicFilter extends Component {
                 >
                     <AppBar position='static' title='What topic is on your mind today?' style={{ backgroundColor: '#CDD8F4', color: 'black' }}>
                         <h1>What topic is on your mind?</h1>
+                        <p>Please make one selection</p>
                     </AppBar>
                     <FormGroup>
                         <FormControlLabel
