@@ -13,6 +13,7 @@ import Login from "./firebase-backend/components/Login";
 import UserProfile from "./firebase-backend/components/UserProfile";
 import PrivateRoute from "./firebase-backend/components/PrivateRoute";
 import ForgotPassword from "./firebase-backend/components/ForgotPassword";
+import { currentUser } from "./firebase-backend/context/AuthContext";
 import { Container } from "react-bootstrap";
 import { AiFillHome } from "react-icons/ai";
 import { BsFillChatDotsFill, BsFillPersonFill } from "react-icons/bs";
@@ -93,12 +94,16 @@ function App() {
           {/* Anny Ng Part */}
           <Switch>
             <div>
-              <Route path="/resources">
+              <Route path="/home">
                 <Resources resourceData={resources} />
               </Route>
-              <Route path="/home" component={Home}></Route>
+
+              <Route exact path="/" component={Home}></Route>
               <Route path="/chat" component={Chat}></Route>
-              <Route path="/questionnaire"></Route>
+              <Route
+                path="/questionnaire"
+                render={(routerProps) => <FilterForm {...routerProps} />}
+              ></Route>
               <Route path="/settings"></Route>
               <Route
                 path="/resource/:id"

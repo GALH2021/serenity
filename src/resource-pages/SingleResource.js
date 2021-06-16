@@ -7,7 +7,7 @@ const SingleResources = (props) => {
   // console.log(data);
 
   const backToStock = () => {
-    props.history.push("/resources");
+    props.history.push("/home");
   };
 
   const apiURL = "https://serenity-api-ga.herokuapp.com/resources";

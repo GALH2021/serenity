@@ -1,28 +1,61 @@
-.home-images {
-    height: 100px;
-    width: 300px;
+@import url("https://fonts.googleapis.com/css2?family=Bilbo&display=swap");
+
+/* .home-images {
+  height: 100px;
+  width: 300px;
 }
 
 .home-div-containers {
-    width: 300px;
+  width: 300px;
 }
 
 .home-div-containers > h3 {
-    text-align: left;
-    margin-bottom: 10PX;
-    font-size: 20px;
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 20px;
 }
 
 .home-div-containers > h4 {
-    margin: 5px 0px -10px 0px;
-    text-align: left;
+  margin: 5px 0px -10px 0px;
+  text-align: left;
 }
 .home-div-containers > p {
-    text-align: left;
-    margin: 10px 0px 30px 0px;
-    font-size: 14px;
+  text-align: left;
+  margin: 10px 0px 30px 0px;
+  font-size: 14px;
 }
 
 .home-div-containers > h2 {
-    text-align: center;
+  text-align: center;
+} */
+
+.main-home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  object-position: 10px 90px;
+}
+.background-img {
+  flex-shrink: 0;
+  max-width: 100%;
+  max-height: 100vh;
+  object-fit: none;
+  object-position: 10px 90px;
+  position: relative;
+}
+
+/* .background-img img {
+  position: absolute;
+} */
+
+.background-img h2 {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Bilbo", cursive;
+  font-size: 60px;
+  letter-spacing: 6.5px;
+  color: #122f68;
 }
