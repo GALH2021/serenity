@@ -3,6 +3,15 @@ import { Form, Button, Card, Alert } from 'react-bootstrap';
 import { useAuth } from '../context/AuthContext';
 import { Link, useHistory } from 'react-router-dom';
 
+async function createUser(data) {
+    return fetch('http://localhost:3000/users', {
+        method: 'POST',
+        headers: {
+            'Content-type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    }).then(response => console.log(response));
+}
 
 function Signup() {
     const emailRef = useRef();
@@ -26,6 +35,8 @@ function Signup() {
             setLoading(true);
             await signup(emailRef.current.value, passwordRef.current.value);
             history.push("/userProfile");
+            console.log(currentUser.uid);
+            createUser({firebaseId: currentUser.uid});
         } catch {
             setError("Failed to create an account");
         }
