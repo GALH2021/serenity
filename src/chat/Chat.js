@@ -16,7 +16,7 @@ export default function Chat() {
     return (
         <div className="chatpage-container">
             <h2>Chat</h2>
-            <p>Sdjhf sdfljhsdf sdfsjdhfs dfsd gffs difhsdf sdfg soidhgsodhgs dgs dgsdfsd sddg sdg.</p>
+            <p>Chat into Serenity</p>
             <div className="chat-form-container">
                 <div className="chat-message-area">{messages.map((message) => {
                     return (
