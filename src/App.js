@@ -7,24 +7,49 @@ import Resources from "./resource-pages/Resources";
 import SingleResource from "./resource-pages/SingleResource";
 import { AuthProvider } from "./firebase-backend/context/AuthContext";
 import FilterForm from "./questionnaire/filterForm";
-import Signup from "./firebase-backend/Signup";
+import Signup from "./firebase-backend/components/Signup";
+import Login from "./firebase-backend/components/Login";
+import UserProfile from "./firebase-backend/components/UserProfile";
+import PrivateRoute from "./firebase-backend/components/PrivateRoute";
+import ForgotPassword from "./firebase-backend/components/ForgotPassword";
 import { Container } from "react-bootstrap";
 import { AiFillHome } from "react-icons/ai";
 import { BsFillChatDotsFill, BsFillPersonFill } from "react-icons/bs";
 import { RiBookletLine } from "react-icons/ri";
 import './App.css';
 
+
+
 function App() {
   return (
     <div className="app">
-      <AuthProvider>
-        <Container className="d-flex align-tiem-center justify-content-center">
-          <div className="w-100" style={{ maxWidth: "500px" }}>
-            <Signup />
-          </div>
-        </Container>
-      </AuthProvider>
-      {/* <FilterForm /> */}
+
+      {/* Bips Part */}
+      <Container 
+        className="d-flex align-tiem-center justify-content-center"
+      >
+        <div className="w-100" style={{ maxWidth: "500px" }}>
+          <Router>
+            <AuthProvider>
+              <Switch>
+                <PrivateRoute exact path="/userProfile" component={UserProfile}/>
+                <Route exact path="/signup" component={Signup}/>
+                <Route exact path="/login" component={Login}/>
+                <Route exact path="/forgotPassword" component={ForgotPassword}/>
+              </Switch>
+            </AuthProvider>
+          </Router>
+        </div>
+      </Container>
+      
+      
+      {/* 
+      // Shane James Part
+      <FilterForm /> 
+      */}
+
+
+      {/* Drew Wilson Part */}
       <Router>
         <nav>
           <div className="navbar-container">
@@ -43,6 +68,7 @@ function App() {
           </div>
         </nav>
         <main>
+          {/* Anny Ng Part */}
           <Switch>
             <div>
               <Route exact path="/">
@@ -59,7 +85,8 @@ function App() {
             </div>
           </Switch>
         </main>
-      </Router>
+      </Router> 
+     
     </div>
   )
 }
