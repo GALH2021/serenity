@@ -15,7 +15,6 @@
   width: 100vw;
   bottom: 0;
   z-index: 100;
-  
 }
 
 .icon-circle {
@@ -25,9 +24,31 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid black;
+  /* border: 2px solid black; */
+  background: #8897b3;
 }
 
 .navbar-icons {
-  color: black;
+  color: #fff;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav-item span {
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 5px;
+  color: #8897b3;
+}
+
+.active .icon-circle {
+  background: #122f68;
+}
+
+.active .nav-text {
+  color: #122f68;
 }

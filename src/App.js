@@ -1,5 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Link,
+  NavLink,
+  Switch,
+  Route,
+} from "react-router-dom";
 import Home from "./home/Home";
 import datafile from "./resource-pages/datafile";
 import Chat from "./chat/Chat";
@@ -68,26 +74,38 @@ function App() {
       <Router>
         <nav>
           <div className="navbar-container">
-            <Link to="/home">
+            <NavLink to="/home" className="nav-item" activeClassName="active">
               <div className="icon-circle">
                 <AiFillHome className="navbar-icons" />
               </div>
-            </Link>
-            <Link to="/chat">
+              <span className="nav-text">Resources</span>
+            </NavLink>
+            <NavLink to="/chat" className="nav-item" activeClassName="active">
               <div className="icon-circle">
                 <BsFillChatDotsFill className="navbar-icons" />
               </div>
-            </Link>
-            <Link to="/questionnaire">
+              <span className="nav-text">Messages</span>
+            </NavLink>
+            <NavLink
+              to="/questionnaire"
+              className="nav-item"
+              activeClassName="active"
+            >
               <div className="icon-circle">
                 <RiBookletLine className="navbar-icons" />
               </div>
-            </Link>
-            <Link to="/settings">
+              <span className="nav-text">Survey</span>
+            </NavLink>
+            <NavLink
+              to="/settings"
+              className="nav-item"
+              activeClassName="active"
+            >
               <div className="icon-circle">
                 <BsFillPersonFill className="navbar-icons" />
               </div>
-            </Link>
+              <span className="nav-text">Profile</span>
+            </NavLink>
           </div>
         </nav>
         <main>
