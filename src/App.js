@@ -38,9 +38,9 @@ function App() {
   return (
     <div className="app">
       <Container className="d-flex align-tiem-center justify-content-center">
-        <div className="w-100" style={{ maxWidth: "500px" }}>
+        <div className="w-100">
           <Router>
-            <nav>
+            <nav className="d-flex align-center justify-content-center">
               <div className="navbar-container">
                 <Link to="/home">
                   <div className="icon-circle">
