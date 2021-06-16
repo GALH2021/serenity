@@ -18,7 +18,7 @@ class Status extends Component {
     }
 
     render() {
-        const { topics, handleInputChange, handleSubmit } = this.props
+        const { topics, handleInputChange } = this.props
 
         return (
             <React.Fragment>
