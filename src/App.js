@@ -7,6 +7,7 @@ import Resources from "./resource-pages/Resources";
 import SingleResource from "./resource-pages/SingleResource";
 import { AuthProvider } from "./firebase-backend/context/AuthContext";
 import FilterForm from "./questionnaire/filterForm";
+import Footer from './home/Footer';
 import Signup from "./firebase-backend/Signup";
 import { Container } from "react-bootstrap";
 import { AiFillHome } from "react-icons/ai";
@@ -24,7 +25,7 @@ function App() {
           </div>
         </Container>
       </AuthProvider>
-      <FilterForm />
+      {/* <FilterForm /> */}
       <Router>
         <nav>
           <div className="navbar-container">
@@ -58,6 +59,7 @@ function App() {
               />
             </div>
           </Switch>
+          <Footer />
         </main>
       </Router>
     </div>

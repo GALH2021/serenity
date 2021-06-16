@@ -16,7 +16,7 @@ export default function Home() {
                 <h4>Podcasts</h4>
                 <p className="home-description">sldgknd ejwhf lkehr lknflasnfk  laksfh  lkehfsfaff aif e fi fi dfasdfkhoak fda fsahdfsa ofgs.</p>
             </div>
-            <div className="last-home-div home-div-containers" >
+            <div className="home-div-containers" >
                 <img className="home-images" src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"></img>
                 <h4>Random Things</h4>
                 <p className="">sldgknd ejwhf lkehr lknflasnfk  laksfh  lkehfsfaff aif e fi fi dfasdfkhoak fda fsahdfsa ofgs.</p>

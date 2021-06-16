@@ -3,10 +3,6 @@
     width: 300px;
 }
 
-.last-home-div {
-    margin-bottom: 100px;
-}
-
 .home-div-containers {
     width: 300px;
 }
@@ -23,8 +19,8 @@
 }
 .home-div-containers > p {
     text-align: left;
-    margin-bottom: 30px;
-    font-size: 12px;
+    margin: 10px 0px 30px 0px;
+    font-size: 14px;
 }
 
 .home-div-containers > h2 {
