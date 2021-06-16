@@ -4,7 +4,7 @@ import { useAuth } from '../context/AuthContext';
 import { Link, useHistory } from 'react-router-dom';
 
 async function createUser(data) {
-    return fetch('http://localhost:3000/users', {
+    return fetch('https://serenity-api-ga.herokuapp.com/users', {
         method: 'POST',
         headers: {
             'Content-type': 'application/json'
