@@ -120,16 +120,17 @@ class PersonFilter extends Component {
                         />
                         <br />
                         <Button
-                            color="default"
-                            variant="contained"
-                            onClick={this.prevScreen}
-                        >Back</Button>
-                        <br />
-                        <Button
                             color="primary"
                             variant="contained"
                             onClick={this.nextScreen}
                         >Continue</Button>
+                        <br />
+                        <Button
+                            color="default"
+                            variant="contained"
+                            onClick={this.prevScreen}
+                        >Back</Button>
+
                     </FormGroup>
                 </Dialog>
             </React.Fragment>
