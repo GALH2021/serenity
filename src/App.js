@@ -36,70 +36,68 @@ function App() {
 
   return (
     <div className="app">
-      <Container className="d-flex align-tiem-center justify-content-center">
-        <div className="w-100">
-          <Router>
-            <nav className="d-flex align-center justify-content-center">
-              <div className="navbar-container">
-                <Link to="/home">
-                  <div className="icon-circle">
-                    <AiFillHome className="navbar-icons" />
-                  </div>
-                </Link>
-                <Link to="/chat">
-                  <div className="icon-circle">
-                    <BsFillChatDotsFill className="navbar-icons" />
-                  </div>
-                </Link>
-                <Link to="/questionnaire">
-                  <div className="icon-circle">
-                    <RiBookletLine className="navbar-icons" />
-                  </div>
-                </Link>
-                <Link to="/userProfile">
-                  <div className="icon-circle">
-                    <BsFillPersonFill className="navbar-icons" />
-                  </div>
-                </Link>
-              </div>
-            </nav>
-            <main>
-              <AuthProvider>
-                <Switch>
-                  <div>
-                    <Route exact path="/home">
-                      <Resources resourceData={resources} />
-                    </Route>
-                    <Route exact path="/" component={Home}></Route>
-                    <Route exact path="/chat" component={Chat}></Route>
-                    <Route
-                      exact path="/questionnaire"
-                      render={(routerProps) => <FilterForm {...routerProps} />}
-                    ></Route>
-                    <Route
-                      exact path="/resource/:id"
-                      render={(routerProps) => <SingleResource {...routerProps} />}
-                    />
-                    <PrivateRoute
-                      exact
-                      path="/userProfile"
-                      component={UserProfile}
-                    />
-                    <Route exact path="/signup" component={Signup} />
-                    <Route exact path="/login" component={Login} />
-                    <Route
-                      exact
-                      path="/forgotPassword"
-                      component={ForgotPassword}
-                    />
-                  </div>
-                </Switch>
-                <Footer />
-              </AuthProvider>
-            </main>
-          </Router>
-        </div>
-      </Container>
+      <div className="w-100">
+        <Router>
+          <nav >
+            <div className="navbar-container">
+              <Link to="/home">
+                <div className="icon-circle">
+                  <AiFillHome className="navbar-icons" />
+                </div>
+              </Link>
+              <Link to="/chat">
+                <div className="icon-circle">
+                  <BsFillChatDotsFill className="navbar-icons" />
+                </div>
+              </Link>
+              <Link to="/questionnaire">
+                <div className="icon-circle">
+                  <RiBookletLine className="navbar-icons" />
+                </div>
+              </Link>
+              <Link to="/userProfile">
+                <div className="icon-circle">
+                  <BsFillPersonFill className="navbar-icons" />
+                </div>
+              </Link>
+            </div>
+          </nav>
+          <main>
+            <AuthProvider>
+              <Switch>
+                <div>
+                  <Route exact path="/home">
+                    <Resources resourceData={resources} />
+                  </Route>
+                  <Route exact path="/" component={Home}></Route>
+                  <Route exact path="/chat" component={Chat}></Route>
+                  <Route
+                    exact path="/questionnaire"
+                    render={(routerProps) => <FilterForm {...routerProps} />}
+                  ></Route>
+                  <Route
+                    exact path="/resource/:id"
+                    render={(routerProps) => <SingleResource {...routerProps} />}
+                  />
+                  <PrivateRoute
+                    exact
+                    path="/userProfile"
+                    component={UserProfile}
+                  />
+                  <Route exact path="/signup" component={Signup} />
+                  <Route exact path="/login" component={Login} />
+                  <Route
+                    exact
+                    path="/forgotPassword"
+                    component={ForgotPassword}
+                  />
+                </div>
+              </Switch>
+              <Footer />
+            </AuthProvider>
+          </main>
+        </Router>
+      </div>
     </div>
   );
 }

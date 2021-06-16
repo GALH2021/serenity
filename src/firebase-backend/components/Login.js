@@ -27,7 +27,7 @@ function Login() {
     }
 
     return (
-        <div className="Login">
+        <div className="Login" style="backgroundColor: #CDD8F4">
             <Card>
                 <Card.Body>
                     <h2 className="text-center mb-4">Log In</h2>
@@ -35,11 +35,11 @@ function Login() {
                     <Form onSubmit={handleSubmit}>
                         <Form.Group id="email">
                             <Form.Label>Email</Form.Label>
-                            <Form.Control type="email" ref={emailRef} required/>
+                            <Form.Control type="email" ref={emailRef} required />
                         </Form.Group>
                         <Form.Group id="password">
                             <Form.Label>Password</Form.Label>
-                            <Form.Control type="password" ref={passwordRef} required/>
+                            <Form.Control type="password" ref={passwordRef} required />
                         </Form.Group>
                         <Button disabled={loading} className="w-100 mt-3" type="submit">
                             Log In
@@ -51,7 +51,7 @@ function Login() {
                 </Card.Body>
             </Card>
             <div className="w-100 text-center mt-2">
-                Don't have an account? <Link to="signup">Sign Up</Link> 
+                Don't have an account? <Link to="signup">Sign Up</Link>
             </div>
         </div>
     );
