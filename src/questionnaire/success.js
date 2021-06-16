@@ -5,9 +5,9 @@ import Checkbox from '@material-ui/core/Checkbox';
 import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 
+// this is a dummy component with the prop for 'Dialog' not open 
+class Success extends Component {
 
-class ConfirmChat extends Component {
-    
     nextScreen = event => {
         event.preventDefault()
         this.props.goToNext()
@@ -28,7 +28,6 @@ class ConfirmChat extends Component {
         return (
             <React.Fragment>
                 <Dialog
-                    open
                     fullWidth
                     maxWidth='sm'
                 >
@@ -43,7 +42,7 @@ class ConfirmChat extends Component {
                                     <Checkbox
                                         color='primary'
                                         name={chat}
-                                     />
+                                    />
                                     <p>{chat}</p>
                                 </span>
                             </Paper>
@@ -68,4 +67,4 @@ class ConfirmChat extends Component {
     }
 }
 
-export default ConfirmChat;
+export default Success;

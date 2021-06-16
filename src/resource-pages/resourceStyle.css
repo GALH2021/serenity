@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
 .overflow-fade {
   position: relative;
   height: 3.6em;
   width: 100%;
-  height: 100px;
+  height: 50px;
   overflow: hidden;
 }
 .overflow-fade:after {
@@ -12,37 +14,92 @@
   bottom: 0;
   right: 0;
   width: 70%;
-  height: 1.2em;
+  height: 1.5em;
   background: linear-gradient(
     to right,
     rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 1) 50%
+    rgb(205 216 244) 50%
   );
+}
+
+.resources,
+.single-resource {
+  margin: 0 auto;
+  background-color: #cdd8f4;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  padding: 5%;
+}
+
+.resources h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #122f68;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.resources h4 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.resources p {
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .resource-list {
   width: 100%;
-  padding: 5% 3%;
   text-align: left;
 }
 
+a {
+  text-decoration: none !important;
+  color: #000 !important;
+}
 .resource-list img {
   width: 100%;
-  height: 200px;
+  height: 150px;
   object-fit: cover;
+  margin-bottom: 5%;
+  border: 1px solid gainsboro;
 }
 
 .resource-tags {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  margin: 2% 0;
 }
-.resource-tags div {
+.resource-tags > div {
   min-width: 25%;
-  height: 20px;
-  padding: 2%;
-  border: 1px solid gainsboro;
-  border-radius: 10px;
+  height: 40px;
+  background: #fff;
+  color: #000;
+  border-radius: 15px;
   text-align: center;
-  margin-top: 5%;
+  padding: 8px 12px;
+  margin: 0 3% 3% 0;
+  font-size: 16px;
+}
+
+.resource-header .resource-tags {
+  margin: 5% 0;
+}
+.resource-header h4 {
+  font-size: 24px;
+  font-weight: 700;
+}
+.resource-header span {
+  font-weight: 600;
+  color: #122f68;
+}
+.resource-content {
+  margin: 8% 0;
+}
+.audio-player {
+  margin: 5% 0;
+}
+.source-link {
+  text-decoration: underline !important;
 }
