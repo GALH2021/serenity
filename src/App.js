@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import Home from "./home/Home";
-import datafile from "./resource-pages/datafile";
 import Chat from "./chat/Chat";
 import Resources from "./resource-pages/Resources";
 import SingleResource from "./resource-pages/SingleResource";
