@@ -42,12 +42,9 @@ function App() {
         </div>
       </Container>
       
-      
-      {/* 
-      // Shane James Part
+    
       <FilterForm /> 
-      */}
-
+    
 
       {/* Drew Wilson Part */}
       <Router>
