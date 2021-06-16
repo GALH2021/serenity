@@ -78,9 +78,7 @@ function App() {
               <Route path="/settings"></Route>
               <Route
                 path="/resource/:id"
-                render={(routerProps) => (
-                  <SingleResource {...routerProps} resourceData={datafile} />
-                )}
+                render={(routerProps) => <SingleResource {...routerProps} />}
               />
             </div>
           </Switch>

@@ -13,14 +13,14 @@ const SingleResources = (props) => {
   const apiURL = "https://serenity-api-ga.herokuapp.com/resources";
   const [resources, setResources] = React.useState([]);
 
-  const idx = props.match.params.id - 1;
+  const idx = props.match.params.id;
 
   const getResources = async () => {
     const response = await fetch(apiURL);
     const allData = await response.json();
     console.log("single resource api call: ", allData);
 
-    const data = allData[idx];
+    const data = allData[idx - 1];
 
     setResources(data);
   };
