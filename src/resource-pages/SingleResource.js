@@ -35,8 +35,8 @@ const SingleResources = (props) => {
         <h4>{resources.desc}</h4>
 
         <div className="resource-tags">
-          <div id="resource-category">Category: {resources.category}</div>
-          <div id="resource-type">Type: {resources.type}</div>
+          <div id="resource-category">Category: Self Care</div>
+          <div id="resource-type">Type: {resources.postType}</div>
           <div id="resource-score">Post Score: {resources.postScore}</div>
         </div>
 

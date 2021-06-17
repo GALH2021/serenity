@@ -1,5 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Link,
+  NavLink,
+  Switch,
+  Route,
+} from "react-router-dom";
 import Home from "./home/Home";
 import Chat from "./chat/Chat";
 import Resources from "./resource-pages/Resources";
@@ -17,7 +23,6 @@ import { AiFillHome } from "react-icons/ai";
 import { BsFillChatDotsFill, BsFillPersonFill } from "react-icons/bs";
 import { RiBookletLine } from "react-icons/ri";
 import "./App.css";
-
 
 function App() {
   const apiURL = "https://serenity-api-ga.herokuapp.com/resources";
@@ -38,28 +43,40 @@ function App() {
     <div className="app">
       <div className="w-100">
         <Router>
-          <nav >
+          <nav>
             <div className="navbar-container">
-              <Link to="/home">
+              <NavLink to="/home" className="nav-item" activeClassName="active">
                 <div className="icon-circle">
                   <AiFillHome className="navbar-icons" />
                 </div>
-              </Link>
-              <Link to="/chat">
+                <span className="nav-text">Resources</span>
+              </NavLink>
+              <NavLink to="/chat" className="nav-item" activeClassName="active">
                 <div className="icon-circle">
                   <BsFillChatDotsFill className="navbar-icons" />
                 </div>
-              </Link>
-              <Link to="/questionnaire">
+                <span className="nav-text">Messages</span>
+              </NavLink>
+              <NavLink
+                to="/questionnaire"
+                className="nav-item"
+                activeClassName="active"
+              >
                 <div className="icon-circle">
                   <RiBookletLine className="navbar-icons" />
                 </div>
-              </Link>
-              <Link to="/userProfile">
+                <span className="nav-text">Survey</span>
+              </NavLink>
+              <NavLink
+                to="/userProfile"
+                className="nav-item"
+                activeClassName="active"
+              >
                 <div className="icon-circle">
                   <BsFillPersonFill className="navbar-icons" />
                 </div>
-              </Link>
+                <span className="nav-text">Profile</span>
+              </NavLink>
             </div>
           </nav>
           <main>
@@ -72,12 +89,16 @@ function App() {
                   <Route exact path="/" component={Home}></Route>
                   <Route exact path="/chat" component={Chat}></Route>
                   <Route
-                    exact path="/questionnaire"
+                    exact
+                    path="/questionnaire"
                     render={(routerProps) => <FilterForm {...routerProps} />}
                   ></Route>
                   <Route
-                    exact path="/resource/:id"
-                    render={(routerProps) => <SingleResource {...routerProps} />}
+                    exact
+                    path="/resource/:id"
+                    render={(routerProps) => (
+                      <SingleResource {...routerProps} />
+                    )}
                   />
                   <PrivateRoute
                     exact
