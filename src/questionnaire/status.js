@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions'
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import TextField from '@material-ui/core/TextField';
 import Checkbox from '@material-ui/core/Checkbox';
@@ -63,6 +64,7 @@ class Status extends Component {
                         label='Check to Share'
                     />
                     <br />
+                    <DialogActions>
                     <Button
                         style={{ backgroundColor: '#CDD8F4' }}
                         variant="contained"
@@ -74,7 +76,7 @@ class Status extends Component {
                         variant="contained"
                         onClick={this.exitToHome}
                     >Exit</Button>
-
+                    </DialogActions>
                 </Dialog>
             </React.Fragment>
         );
