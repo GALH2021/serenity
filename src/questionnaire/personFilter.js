@@ -50,6 +50,11 @@ class PersonFilter extends Component {
         this.props.goBack()
     }
 
+    exitToHome = event => {
+        event.preventDefault()
+        this.props.exitChat()
+    }
+
     render() {
         const { topics, handleInputChange } = this.props
 
@@ -166,6 +171,12 @@ class PersonFilter extends Component {
                             variant="contained"
                             onClick={this.prevScreen}
                         >Back</Button>
+                            <br />
+                            <Button
+                                color="default"
+                                variant="contained"
+                                onClick={this.exitToHome}
+                            >Exit</Button>
                         </DialogActions>
                     </FormGroup>
                 </Dialog>

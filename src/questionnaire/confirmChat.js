@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions'
 import Checkbox from '@material-ui/core/Checkbox';
 import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormGroup from '@material-ui/core/FormGroup';
 
 
 class ConfirmChat extends Component {
@@ -29,7 +32,7 @@ class ConfirmChat extends Component {
     }
 
     render() {
-        const { openChats } = this.props
+        const { openChats, handleInputChange } = this.props
         return (
             <React.Fragment>
                 <Dialog
@@ -43,18 +46,26 @@ class ConfirmChat extends Component {
                     <br />
                     <div>
                         {openChats.chats.map(chat => (
-                            <Paper key={chat.id} elevation={5}>
-                                <span>
-                                    <Checkbox
+                            <Paper key={chat.id} elevation={3}>
+                                <FormGroup>
+                                    <FormControlLabel
+                                    control={<Checkbox
                                         color='primary'
+                                        checked={openChats.chat}
+                                        onChange={handleInputChange}
                                         name={chat}
+                                        value={chat}
                                      />
-                                    <p>{chat}</p>
-                                </span>
+                                    }
+                                    label={chat}
+                                    />
+                                </FormGroup>
                             </Paper>
                         ))}
+                        <br />
                     </div>
                     <br />
+                    <DialogActions>
                     <Button
                         style={{ backgroundColor: '#CDD8F4' }}
                         variant="contained"
@@ -66,7 +77,7 @@ class ConfirmChat extends Component {
                         variant="contained"
                         onClick={this.exitToHome}
                     >Exit</Button>
-
+                    </DialogActions>
                 </Dialog>
             </React.Fragment>
         );

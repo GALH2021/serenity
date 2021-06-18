@@ -178,6 +178,7 @@ class filterForm extends Component {
             goToNext={this.goToNext}
             handleInputChange={this.handleInputChange}
             topics={topics}
+            exitChat={this.exitChat}
           />
         );
       case 2:
@@ -187,6 +188,7 @@ class filterForm extends Component {
             goBack={this.goBack}
             handleInputChange={this.handleInputChange}
             topics={topics}
+            exitChat={this.exitChat}
           />
         );
       case 3:

@@ -31,7 +31,7 @@ class TopicFilter extends Component {
             this.props.goToNext()
         } else if (validSelection < 1){
            return (
-               enqueueSnackbar('Please make one selection', {
+               enqueueSnackbar('Please make one selection or press exit', {
                    preventDuplicate: true
                })
            )
@@ -43,6 +43,11 @@ class TopicFilter extends Component {
             )
         }
 
+    }
+
+    exitToHome = event => {
+        event.preventDefault()
+        this.props.exitChat()
     }
 
     render() {
@@ -133,6 +138,12 @@ class TopicFilter extends Component {
                             variant="contained"
                             onClick={this.nextScreen}
                         >Continue</Button>
+                            <br />
+                            <Button
+                                color="default"
+                                variant="contained"
+                                onClick={this.exitToHome}
+                            >Exit</Button>
                         </DialogActions>
                     </FormGroup>
                 </Dialog>
