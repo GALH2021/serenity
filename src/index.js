@@ -7,11 +7,14 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { SnackbarProvider } from 'notistack'
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
+      <SnackbarProvider maxSnack={3}>
       <App />
+      </SnackbarProvider>
     </Router>
   </React.StrictMode>,
   document.getElementById("root")

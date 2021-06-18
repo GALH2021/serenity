@@ -1,15 +1,48 @@
 import React, { Component } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions'
 import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Button from '@material-ui/core/Button';
+import { withSnackbar } from 'notistack'
+
+const isTrue = function(array) {
+    let trueCount = 0
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === true) {
+            trueCount++
+        }
+    }
+    return trueCount
+}
 
 class TopicFilter extends Component {
     nextScreen = event => {
+
         event.preventDefault()
-        this.props.goToNext()
+        const { topics, enqueueSnackbar } = this.props
+        const topicsValuesArray = Object.values(topics)
+        // console.log(topicsValuesArray)
+        const validSelection = isTrue(topicsValuesArray)
+        // console.log(validSelection)
+        if (validSelection === 1) {
+            this.props.goToNext()
+        } else if (validSelection < 1){
+           return (
+               enqueueSnackbar('Please make one selection', {
+                   preventDuplicate: true
+               })
+           )
+        } else if (validSelection > 1) {
+            return (
+                enqueueSnackbar('Please make only one selection', {
+                    preventDuplicate: true
+                })
+            )
+        }
+
     }
 
     render() {
@@ -94,11 +127,13 @@ class TopicFilter extends Component {
                             label='None of these'
                         />
                         <br />
+                        <DialogActions>
                         <Button
                             style={{ backgroundColor: '#CDD8F4' }}
                             variant="contained"
                             onClick={this.nextScreen}
                         >Continue</Button>
+                        </DialogActions>
                     </FormGroup>
                 </Dialog>
             </React.Fragment>
@@ -106,4 +141,4 @@ class TopicFilter extends Component {
     }
 }
 
-export default TopicFilter;
+export default withSnackbar(TopicFilter);
