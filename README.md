@@ -12,6 +12,7 @@
 [Summary](#summary)<br> 
 [Research](#research)<br> 
 [Design](#design)<br> 
+[Technologies Used](#technologies-used)<br>
 [Wireframes](#wireframes)<br> 
 [Features](#features)<br>
 [UX prototype](#ux-prototype)<br>
@@ -57,3 +58,18 @@ Needs:
 | --- |
 | <img src="https://user-images.githubusercontent.com/14338321/123173509-b5585480-d44c-11eb-9c82-6822937ca807.png" alt="High Fidelity Wireframe"> | 
  
+## Technologies Used
+
+<table>
+    <tbody>
+        <tr>
+            <ul>
+                <li>React</li>
+                <li>HTML/CSS</li>
+            </ul>
+        </tr>
+        <tr>
+            <img src="https://user-images.githubusercontent.com/14338321/123177436-43cfd480-d453-11eb-9d1b-8b839e562a20.png" alt="Technologies Used">
+        </tr>
+    </tbody>
+</table>
