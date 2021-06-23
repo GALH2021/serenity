@@ -14,7 +14,8 @@
 [Design](#design)<br> 
 [Wireframes](#wireframes)<br> 
 [Features](#features)<br>
-[UX prototype](#-ux-prototype)<br>
+[UX prototype](#ux-prototype)<br>
+[Future Plans](#future-plans)<br>
 [Sources](#sources)<br>
 [Our Team](#our-team)<br>
 
@@ -23,7 +24,8 @@
 
 ### Problem = <span style="font-size: smaller">Parents and caregivers share a struggle of monitoring the wellbeing of another human without much support.
 
-### Solution = <span style="font-size: smaller">Create a <strong>Technology that offers <em>peace of mind</em> to parents or caregivers</strong></span>
+### Solution = <span style="font-size: smaller">Create a **Technology that offers *peace of mind* to parents or caregivers**</span>
+
 
 ## Research
 #### Competitive Analysis
@@ -31,7 +33,27 @@
 
 | <p align="center">Caring For You</p> | <p align="center">Manatee</p> | <p align="center">Ginger</p> |
 |---|---|---|
-| <img src="https://user-images.githubusercontent.com/14338321/123141260-35b78f00-d426-11eb-8bb9-b0adbb62e109.png" alt="caring-for-you"> | <img src="https://user-images.githubusercontent.com/14338321/123141290-3c460680-d426-11eb-9ddf-30432e18f6bf.png" alt="manatee"> | <img src="https://user-images.githubusercontent.com/14338321/123141335-47009b80-d426-11eb-8126-2970adc1a442.png" alt="ginger"> |
+| <img src="https://user-images.githubusercontent.com/14338321/123141260-35b78f00-d426-11eb-8bb9-b0adbb62e109.png" alt="Caring For You"> | <img src="https://user-images.githubusercontent.com/14338321/123141290-3c460680-d426-11eb-9ddf-30432e18f6bf.png" alt="Manatee"> | <img src="https://user-images.githubusercontent.com/14338321/123141335-47009b80-d426-11eb-8126-2970adc1a442.png" alt="Ginger"> |
+
+#### Our User
+Goals:
+- Learn about good self-care practices
+- Get support from people in the same situation
+- Recieve mental health support as needed
+
+Needs:
+- Chat with other healthcare workers
+- Maintain anonymity for patient privacy
+- Access personalized informational resources
 
 
+## Design
 
+| <p align="center">**Low Fidelity Wireframes**</p> | 
+| --- | 
+| <img src="https://user-images.githubusercontent.com/14338321/123172642-66f68600-d44b-11eb-9980-89dabe3576e6.png" alt="Low Fidelity Wireframe"> | 
+
+| <p align="center">**High Fidelity Wireframes**</p> |
+| --- |
+| <img src="https://user-images.githubusercontent.com/14338321/123173509-b5585480-d44c-11eb-9c82-6822937ca807.png" alt="High Fidelity Wireframe"> | 
+ 
