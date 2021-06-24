@@ -61,15 +61,29 @@ Needs:
 ## Technologies Used
 
 <table>
-    <tbody>
-        <tr>
+    <tr>
+        <td>
+            <th>Tech List</th>
+        </td>
+    </tr>
+    <tr>
+        <td>
             <ul>
                 <li>React</li>
                 <li>HTML/CSS</li>
+                <li>Firebase</li>
+                <li>Temp Mail</li>
+                <li>PostgreSQL</li>
+                <li>Bootstrap</li>
+                <li>Ruby on Rails</li>
+                <li>Figma</li>
+                <li>Netlify</li>
+                <li>GitHub</li>
+                <li>Heroku</li>
             </ul>
-        </tr>
-        <tr>
-            <img src="https://user-images.githubusercontent.com/14338321/123177436-43cfd480-d453-11eb-9d1b-8b839e562a20.png" alt="Technologies Used">
-        </tr>
-    </tbody>
+        </td>
+        <td>
+            <img src="https://user-images.githubusercontent.com/14338321/123295908-29920700-d4e4-11eb-8606-e3f93ef8bb09.png" alt="Technologies Used" width="500">
+        </td>
+    </tr>
 </table>
