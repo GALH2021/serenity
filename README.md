@@ -1,3 +1,5 @@
+<img src="https://user-images.githubusercontent.com/14338321/123308848-2e5db780-d4f2-11eb-90f9-f9a2ff918513.png" alt="Serenity Project Title" width="100%"><br>
+
 # Serenity - <span style="font-size: smaller">An emotional support app for caregivers</span>
 
 #### <em>Designed for mobile devices</em> 
@@ -111,3 +113,6 @@ Needs:
 ## App Demo
 #### *Demo:*
 ![serenity-demo](https://user-images.githubusercontent.com/14338321/123307502-8f848b80-d4f0-11eb-86c9-627d417392ae.gif)
+
+
+## Future Plans
