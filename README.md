@@ -62,12 +62,12 @@ Needs:
 
 <table>
     <tr>
-        <td>
-            <th>Tech List</th>
-        </td>
-        <td>
-            <th>Tech Icons</th>
-        </td>
+        <th>
+            <p align="center">Tech List</p>
+        </th>
+        <th>
+            <p align="center">Tech Icons</p>
+        </th>
     </tr>
     <tr>
         <td>
@@ -85,7 +85,7 @@ Needs:
                 <li>Heroku</li>
             </ul>
         </td>
-        <td>
+        <td>    
             <img src="https://user-images.githubusercontent.com/14338321/123295908-29920700-d4e4-11eb-8606-e3f93ef8bb09.png" alt="Technologies Used" width="500">
         </td>
     </tr>
