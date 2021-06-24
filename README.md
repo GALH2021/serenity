@@ -15,7 +15,7 @@
 [Technologies Used](#technologies-used)<br>
 [Wireframes](#wireframes)<br> 
 [Features](#features)<br>
-[UX prototype](#ux-prototype)<br>
+[App Demo](#app-demo)<br>
 [Future Plans](#future-plans)<br>
 [Sources](#sources)<br>
 [Our Team](#our-team)<br>
@@ -90,3 +90,23 @@ Needs:
         </td>
     </tr>
 </table>
+
+
+## Wireframes
+
+#### Frontend: Userflow
+![frontend-wireframe](https://user-images.githubusercontent.com/14338321/123302969-4251eb00-d4eb-11eb-918a-b90c34940dc7.png)
+
+#### Backend: Relational database
+![backend-wireframe](https://user-images.githubusercontent.com/14338321/123302974-441bae80-d4eb-11eb-8e2b-e5d55fe151fb.png)
+
+
+## Features
+
+| <p align="center">**Home Page**</p> | <p align="center">**Sign Up**</p>| <p align="center">**Questionnaire**</p> | <p align="center">**Resources**</p> | <p align="center">**Chat**</p> |
+| --- | --- | --- | --- | --- |
+| <img src="https://user-images.githubusercontent.com/14338321/123303817-34e93080-d4ec-11eb-986d-65695d633331.png" alt="Landing Page"> | <img src="https://user-images.githubusercontent.com/14338321/123303824-37e42100-d4ec-11eb-866c-5118fbedfe67.png" alt="Sign Up"> | <img src="https://user-images.githubusercontent.com/14338321/123303834-3ca8d500-d4ec-11eb-9184-593759c670d6.png" alt="Questionnaire"> | <img src="https://user-images.githubusercontent.com/14338321/123303849-40d4f280-d4ec-11eb-963d-9500a5143889.png" alt="Resources"> | <img src="https://user-images.githubusercontent.com/14338321/123303869-45011000-d4ec-11eb-9da0-1a5cbbb5fe2c.png" alt="Chat">|
+
+
+## App Demo
+#### *Demo:*
