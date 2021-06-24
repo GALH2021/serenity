@@ -65,6 +65,9 @@ Needs:
         <td>
             <th>Tech List</th>
         </td>
+        <td>
+            <th>Tech Icons</th>
+        </td>
     </tr>
     <tr>
         <td>
