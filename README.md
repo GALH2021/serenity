@@ -110,3 +110,4 @@ Needs:
 
 ## App Demo
 #### *Demo:*
+![serenity-demo](https://user-images.githubusercontent.com/14338321/123307502-8f848b80-d4f0-11eb-86c9-627d417392ae.gif)
