@@ -10,6 +10,10 @@
 ### Live Demo 
 - Link = https://myserenity.netlify.app/
 
+### Serenity API
+- Link = https://github.com/serenity-hackathon/serenity_api 
+
+
 ## Index
 [Summary](#summary)<br> 
 [Research](#research)<br> 
@@ -116,3 +120,21 @@ Needs:
 
 
 ## Future Plans
+
+- Conduct usability testing to maintain app
+- Connect with professional mental health researcher to gain further insight into the needs of caregivers
+- Make Chat app functionable and add backend for the app
+- Complete full CRUD functionality for user profile and make it asthetically pleasing
+- Implement Serenity score from the questionnaire
+- Direct users to appropriate Resources
+
+
+## Sources
+> Working progress
+
+
+## Our Team
+- UX Team = In Scott Park, Adam Brennan, Jess martinex, Nathan Weber
+- Dev Team = Anny Ng, Biprajit Majumder, Colton Trent, Shane James, Drew Wilson
+
+![serenity-team](https://user-images.githubusercontent.com/14338321/123309902-7f21e000-d4f3-11eb-9f23-cc4c7fa190cc.jpg)
