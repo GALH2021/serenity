@@ -23,7 +23,6 @@
 [Features](#features)<br>
 [App Demo](#app-demo)<br>
 [Future Plans](#future-plans)<br>
-[Sources](#sources)<br>
 [Our Team](#our-team)<br>
 
 
@@ -127,10 +126,6 @@ Needs:
 - Complete full CRUD functionality for user profile and make it asthetically pleasing
 - Implement Serenity score from the questionnaire
 - Direct users to appropriate Resources
-
-
-## Sources
-> Working progress
 
 
 ## Our Team
